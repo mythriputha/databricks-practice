@@ -1,0 +1,322 @@
+{
+  "datasets": [
+    {
+      "config": {
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count",
+            "expr": "COUNT(*)",
+            "name": "count"
+          }
+        ],
+        "source": "demo_catalog.demo_schema.customers",
+        "version": "1.1"
+      },
+      "displayName": "customers",
+      "name": "c9926843"
+    }
+  ],
+  "pages": [
+    {
+      "displayName": "Untitled page",
+      "layout": [
+        {
+          "position": {
+            "height": 4,
+            "width": 4,
+            "x": 0,
+            "y": 0
+          },
+          "widget": {
+            "name": "30c12b3f",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "c9926843",
+                  "disaggregated": false,
+                  "fields": [
+                    {
+                      "expression": "COUNT(`*`)",
+                      "name": "count(*)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "data": {
+                "queryName": "main_query"
+              },
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)"
+                }
+              },
+              "frame": {
+                "showTitle": true
+              },
+              "version": 2,
+              "widgetType": "counter"
+            }
+          }
+        },
+        {
+          "position": {
+            "height": 5,
+            "width": 8,
+            "x": 4,
+            "y": 0
+          },
+          "widget": {
+            "name": "a00cea6c",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "c9926843",
+                  "disaggregated": false,
+                  "fields": [
+                    {
+                      "expression": "SUM(`age`)",
+                      "name": "sum(age)"
+                    },
+                    {
+                      "expression": "`city`",
+                      "name": "city"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "data": {
+                "queryName": "main_query"
+              },
+              "encodings": {
+                "x": {
+                  "fieldName": "sum(age)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "city",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "frame": {
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "position": 9,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 2,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 3,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 4,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 5,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 6,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 7,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 8,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 9,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 10,
+                    "themeColorType": "visualizationColors"
+                  }
+                ]
+              },
+              "version": 3,
+              "widgetType": "bar"
+            }
+          }
+        },
+        {
+          "position": {
+            "height": 5,
+            "width": 4,
+            "x": 0,
+            "y": 4
+          },
+          "widget": {
+            "name": "76b787d5",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "c9926843",
+                  "disaggregated": false,
+                  "fields": [
+                    {
+                      "expression": "COUNT(DISTINCT `department`)",
+                      "name": "countdistinct(department)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "data": {
+                "queryName": "main_query"
+              },
+              "encodings": {
+                "angle": {
+                  "fieldName": "countdistinct(department)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "position": 6,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 2,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 3,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 4,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 5,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 6,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 7,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 8,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 9,
+                    "themeColorType": "visualizationColors"
+                  },
+                  {
+                    "position": 10,
+                    "themeColorType": "visualizationColors"
+                  }
+                ]
+              },
+              "version": 3,
+              "widgetType": "pie"
+            }
+          }
+        },
+        {
+          "position": {
+            "height": 4,
+            "width": 8,
+            "x": 4,
+            "y": 5
+          },
+          "widget": {
+            "name": "b0824588",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "c9926843",
+                  "disaggregated": false,
+                  "fields": [
+                    {
+                      "expression": "`email`",
+                      "name": "email"
+                    },
+                    {
+                      "expression": "COUNT(DISTINCT `department`)",
+                      "name": "countdistinct(department)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "data": {
+                "queryName": "main_query"
+              },
+              "encodings": {
+                "x": {
+                  "fieldName": "email",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "countdistinct(department)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "showTitle": true
+              },
+              "version": 3,
+              "widgetType": "waterfall"
+            }
+          }
+        }
+      ],
+      "layoutVersion": "GRID_V1",
+      "name": "58120905",
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "applyModeEnabled": false,
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    }
+  }
+}

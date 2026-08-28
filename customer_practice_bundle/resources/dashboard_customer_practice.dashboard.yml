@@ -1,0 +1,6 @@
+resources:
+  dashboards:
+    dashboard_customer_practice:
+      display_name: "Dashboard_Customer_Practice"
+      warehouse_id: 244ab9e384e7472a
+      file_path: ../src/dashboard_customer_practice.lvdash.json
